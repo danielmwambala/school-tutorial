@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # get 'welcome/index'
   # set welcome page as the root
   root 'welcome#index'
+  resources :students
 end
