@@ -16,12 +16,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_25_054339) do
     t.string "last_name"
     t.string "email"
     t.string "phone_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "address"
     t.string "contact_number"
     t.string "date_of_birth"
     t.integer "grade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

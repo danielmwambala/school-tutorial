@@ -1,0 +1,53 @@
+<h1>Create a new student record</h1>
+
+<%= form_with model: @student do |form| %>
+
+    <% if @student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% @student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div>
+        <%= form.label :first_name%><br>
+        <%= form.text_field :first_name%>
+    </div>
+    <div>
+        <%= form.label :last_name%><br>
+        <%= form.text_field :last_name%>
+    </div>
+    <div>
+        <%= form.label :email_address%><br>
+        <%= form.email_field :email%>
+    </div>
+    <div>
+        <%= form.label :phone_number%><br>
+        <%= form.text_field :phone_number%>
+    </div>
+    <div>
+        <%= form.label :address%><br>
+        <%= form.text_field :address%>
+    </div>
+    <div>
+        <%= form.label :contact_number%><br>
+        <%= form.text_field :contact_number%>
+    </div>
+    <div>
+        <%= form.label :date_of_birth%><br>
+        <%= form.text_field :date_of_birth%>
+    </div>
+    <div>
+        <%= form.label :grade%><br>
+        <%= form.number_field :grade%>
+    </div>
+    <div>
+        <br>
+        <%= form.submit %>
+    </div>
+<% end %>
