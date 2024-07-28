@@ -9,4 +9,4 @@
 <p><strong>Date of birth: </strong><%= @student.date_of_birth %></p>
 <p><strong>Grade: </strong><%= @student.grade %></p>
 
-<p><%= link_to "Back", students_path%></p>
+<p><%= link_to "Back", students_path%> | <%= link_to "Edit", edit_student_path(@student) %> | <%= link_to 'Delete', @student, data: {method: :delete, confirm: 'Are you sure?'} %></p>
