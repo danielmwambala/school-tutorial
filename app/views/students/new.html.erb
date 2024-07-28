@@ -3,16 +3,10 @@
 <%= form_with model: @student do |form| %>
 
     <% if @student.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-        <% @student.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% @student.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% end %>
 
     <div>
         <%= form.label :first_name%><br>
@@ -50,4 +44,6 @@
         <br>
         <%= form.submit %>
     </div>
+
+    <p><%= link_to "Back", students_path %></p>
 <% end %>
